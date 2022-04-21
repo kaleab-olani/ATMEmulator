@@ -10,7 +10,7 @@ public class RequestHandler {
     public static Object makeRequest(Class<Object> tClass , String path, String ...params){
 //        String path = BASE_API + path"card?cardNumber=" + cardNumber;
         RestTemplate restTemplate = new RestTemplate();
-//        ResponseEntity<Card> cardResponse = restTemplate.getForEntity(path, tClass);
+        ResponseEntity<Object> cardResponse = restTemplate.getForEntity(path, tClass);
         return cardResponse.getBody();
     }
 }
