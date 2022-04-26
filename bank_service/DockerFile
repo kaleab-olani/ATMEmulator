@@ -1,0 +1,9 @@
+FROM ubuntu
+
+FROM java:8
+
+EXPOSE 8080
+
+ADD target/bank_service.jar bank_service.jar
+
+ENTRYPOINT ["java", "jar", "bank-service.jar"]
